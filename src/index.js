@@ -64,7 +64,7 @@ const isValidIp = (ip) => {
 
     // 无效IP
     if (ipFragArray.length !== 4 || !isNumberOfIpFrag) {
-        return IS_INVALID;
+        return IS_INVALID.isValid;
     }
 
     // 有效可用IP
@@ -102,17 +102,17 @@ const isValidIp = (ip) => {
     if (isValidAndCanUseIps) {
         // 有效可使用ip里面包含了一些“有效不可使用外网”和“有效不可使用”ip
         if (isValidAndCanNotUseExtraNext) {
-            return IS_VALID_USE_SPECIAL;
+            return IS_VALID_USE_SPECIAL.isValid;
         }
         if (isValidAndCanNotUseIps) {
-            return IS_VALID_NOT_USE;
+            return IS_VALID_NOT_USE.isValid;
         }
-        return IS_VALID_USE;
+        return IS_VALID_USE.isValid;
     }
 
 
     if (isValidAndCanNotUseIps) {
-        return IS_VALID_NOT_USE;
+        return IS_VALID_NOT_USE.isValid;
     }
 };
 

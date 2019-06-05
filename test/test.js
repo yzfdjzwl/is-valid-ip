@@ -36,9 +36,10 @@ const getResultInfo = (item) => {
 describe('ip是否有效的校验', function() {
     demos.forEach((item, index, array) => {
         it(getResultInfo(item), function() {
-            assert.equal(isValidIp(item.ip).isValid, item.isValid);
-            assert.equal(isValidIp(item.ip).canUseExtraNext, item.canUseExtraNext);
-            assert.equal(isValidIp(item.ip).isUsable, item.isUsable);
+            // assert.equal(isValidIp(item.ip).isValid, item.isValid);
+            assert.equal(isValidIp(item.ip), item.isValid);
+            // assert.equal(isValidIp(item.ip).canUseExtraNext, item.canUseExtraNext);
+            // assert.equal(isValidIp(item.ip).isUsable, item.isUsable);
         });
     });
 });
